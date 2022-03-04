@@ -1,16 +1,22 @@
-﻿using System.Collections;
-using System.Text;
-using System.Text.Json;
-using Accelerex.Api.Entities;
-using Accelerex.Api.Interfaces;
-using DayOfWeek = System.DayOfWeek;
+﻿using Accelerex.Api.Entities;
+using MediatR;
 using Type = Accelerex.Api.Entities.Type;
 
-namespace Accelerex.Api.Services;
+namespace Accelerex.Api.Handler;
 
-public class ConverterService : IConverterService
+public class ConverterHandler : IRequestHandler<ConvertWeekdays, string>
 {
-    public async Task<string> ConvertToReadableText(WeekDays payload)
+
+    public ConverterHandler()
+    {
+    }
+    public async Task<string> Handle(ConvertWeekdays request, CancellationToken cancellationToken = default)
+    {
+        return await ConvertToReadableText(request.WeekDays);
+        
+    }
+    
+    private async Task<string> ConvertToReadableText(WeekDays payload)
     {
         var receivedInfo = payload;
         var result = "";
@@ -72,24 +78,7 @@ public class ConverterService : IConverterService
 
         return result;
     }
-
-    public async Task<int[]> InversePermutate(int[] payload)
-    {
-        var size = payload.Length;
-        int[] secondList = new int[size];
-
-        for (int i = 0; i < size ; i++ )
-        {
-            var index = i;
-            var number = payload[i];
-            
-            
-            secondList[number - 1] = i + 1;
-        }
-
-        return secondList;
-    }
-
+    
     private string ConvertToTime(int linuxTime)
     {
         var timeResult = "";

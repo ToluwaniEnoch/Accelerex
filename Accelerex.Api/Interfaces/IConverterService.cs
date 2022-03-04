@@ -4,6 +4,6 @@ namespace Accelerex.Api.Interfaces;
 
 public interface IConverterService
 {
-    string ConvertToReadableText(WeekDays payload);
-    int[] InversePermutate(int[] payload);
+    Task<string> ConvertToReadableText(WeekDays payload);
+    Task<int[]> InversePermutate(int[] payload);
 }
