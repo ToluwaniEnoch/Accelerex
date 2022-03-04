@@ -15,4 +15,8 @@
       <ProjectReference Include="..\Accelerex.Domain\Accelerex.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include="testdata.json" />
+    </ItemGroup>
+
 </Project>
