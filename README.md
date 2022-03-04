@@ -16,18 +16,20 @@ Example payload is in path: Accelerex.Domain/testdata.json
 Question 1 also asks to tell my thoughts on the json payload
 
 The JSON payload form is good, only subjective preference for me would be to get the day as a value as well. 
+
 {
   {
     {
-    "day" : "Monday",
-    "values" : [{
-                  "type": "close",
-                  "value" "3600"
-                  },
-                  {
-                  "type": "close",
-                  "value" "43200"
-                  }
+      "day": "Monday",
+      "values": [
+        {
+          "type": "close",
+          "value""3600"
+        },
+        {
+          "type": "close",
+          "value""43200"
+        }
+      }
     }
   }
-}
