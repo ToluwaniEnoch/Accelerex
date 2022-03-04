@@ -1,5 +1,7 @@
+using System.Reflection;
 using Accelerex.Api.Interfaces;
 using Accelerex.Api.Services;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IConverterService, ConverterService>();
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

@@ -1,6 +1,6 @@
 ﻿using Accelerex.Api.Entities;
-using Accelerex.Api.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using IMediator = MediatR.IMediator;
 
 namespace Accelerex.Api.Controllers;
 
@@ -8,22 +8,24 @@ namespace Accelerex.Api.Controllers;
 [ApiController]
 public class ConverterController : ControllerBase
 {
-    private readonly IConverterService _converterService;
+    private readonly IMediator _mediator;
 
-    public ConverterController(IConverterService converterService)
+    public ConverterController(IMediator mediator)
     {
-        _converterService = converterService;
+        _mediator = mediator;
     }
 
     [HttpPost]
-    public ActionResult<string> Convert(WeekDays payload)
+    public async Task<ActionResult> Convert(WeekDays payload)
     {
-        return _converterService.ConvertToReadableText(payload);
+        var result = await _mediator.Send(new ConvertWeekdays(payload));
+        return Ok(result);
     }
     
     [HttpPost("inverter")]
-    public ActionResult<int[]> Invert(int[] payload)
+    public async Task<ActionResult> Invert(int[] payload)
     {
-        return _converterService.InversePermutate(payload);
+        var result = await _mediator.Send(new InversePermute(payload));
+        return Ok(result);
     }
 }

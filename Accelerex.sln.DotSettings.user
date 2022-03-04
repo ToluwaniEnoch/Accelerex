@@ -1,7 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=af031462_002D9019_002D4cca_002D81b2_002Ddbd01306b3c8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="InvertArrayOfLengthFour" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::D98C14E1-78AA-47BE-B5E3-25BC9B1D6DCA::net6.0::Accelerex.Test.InversePermutationUnitTest.InvertArrayOfLengthFour&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::D98C14E1-78AA-47BE-B5E3-25BC9B1D6DCA::net6.0::Accelerex.Test.InversePermutationUnitTest.InvertArrayOfLengthFive&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::D98C14E1-78AA-47BE-B5E3-25BC9B1D6DCA::net6.0::Accelerex.Test.InversePermutationUnitTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -4,9 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerex.Api", "Accelerex.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerex.Test", "Accelerex.Test\Accelerex.Test.csproj", "{D98C14E1-78AA-47BE-B5E3-25BC9B1D6DCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerex.Domain", "Accelerex.Domain\Accelerex.Domain.csproj", "{265592E0-785B-48AF-B00E-C61318C0C52D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerex.Core", "Accelerex.Core\Accelerex.Core.csproj", "{265592E0-785B-48AF-B00E-C61318C0C52D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerex.Infrastructure", "Accelerex.Infrastructure\Accelerex.Infrastructure.csproj", "{298D3811-2363-4405-9FF3-396A15F19929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerex.Application", "Accelerex.Application\Accelerex.Application.csproj", "{298D3811-2363-4405-9FF3-396A15F19929}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
